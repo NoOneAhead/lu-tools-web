@@ -8,7 +8,7 @@
 - [OSS Dependency CVE & Copyleft License Gate](https://nooneahead.github.io/lu-tools-web/): Instant npm & PyPI OSV.dev vulnerability and SPDX copyleft license check.
 
 ## Scalable Pay-Per-Event Apify Actors & MCP Servers
-- [B2B Domain Pre-Flight & AI-Readiness Fusion](https://apify.com/lu-tools/b2b-domain-preflight-fusion)
-- [SaaS Pricing, OpenAPI & Changelog Semantic Diff Monitor](https://apify.com/lu-tools/saas-pricing-api-diff-monitor)
-- [OSS Dependency & Repo Due-Diligence Auditor (MCP)](https://apify.com/lu-tools/oss-dependency-due-diligence-mcp)
+- [B2B Domain Pre-Flight & AI-Readiness Fusion](https://apify.com/lu-tools/b2b-domain-preflight-fusion?fpr=hs8o1j)
+- [SaaS Pricing, OpenAPI & Changelog Semantic Diff Monitor](https://apify.com/lu-tools/saas-pricing-api-diff-monitor?fpr=hs8o1j)
+- [OSS Dependency & Repo Due-Diligence Auditor (MCP)](https://apify.com/lu-tools/oss-dependency-due-diligence-mcp?fpr=hs8o1j)
 - [n8n Templates & MCP Config Starter Repo](https://github.com/NoOneAhead/apify-b2b-and-agent-workflows)
