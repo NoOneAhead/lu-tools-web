@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nooneahead.github.io/lu-tools-web/sitemap.xml

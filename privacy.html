@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Lu Tools &amp; SiteSignal Extension</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="brand-badge">LT</span>
+        <div><h1>Lu Tools Privacy Policy</h1></div>
+      </div>
+      <nav class="header-links"><a href="./index.html">← Back to Tools</a></nav>
+    </div>
+  </header>
+  <main class="container" style="padding:32px 20px; max-width:780px;">
+    <div class="card">
+      <h2>Privacy Policy</h2>
+      <p class="hint">Last updated: November 21, 2026</p>
+      <p>This Privacy Policy covers the <strong>Lu Tools Web Suite</strong> (<code>nooneahead.github.io/lu-tools-web</code>) and the <strong>SiteSignal Browser Extension</strong> (Microsoft Edge / Chrome).</p>
+      <h3>1. Data We Do Not Collect</h3>
+      <p>We do <strong>not</strong> collect, store, sell, or transmit your browsing history, personal identity, cookies, passwords, or form inputs to any developer-controlled server.</p>
+      <h3>2. How Tool Lookups Work</h3>
+      <ul>
+        <li><strong>DNS &amp; Security Checks:</strong> Domain hostnames you explicitly inspect are queried directly from your browser to public DNS-over-HTTPS resolvers (<code>dns.google</code>) or public endpoints on the target domain (<code>/llms.txt</code>, <code>/robots.txt</code>, <code>/.well-known/security.txt</code>).</li>
+        <li><strong>OSS Dependency Checks:</strong> Package names you submit are queried directly against public APIs (<code>api.osv.dev</code>, <code>registry.npmjs.org</code>, <code>pypi.org</code>).</li>
+        <li><strong>Optional Pro License Verification:</strong> If you choose to enter a Pro license key inside the SiteSignal extension, the extension verifies that key with Gumroad's license API and stores your unlock status locally using <code>chrome.storage.local</code>.</li>
+      </ul>
+      <h3>3. Contact</h3>
+      <p>Questions or privacy requests can be opened via our public GitHub repository: <a href="https://github.com/NoOneAhead/apify-b2b-and-agent-workflows">github.com/NoOneAhead/apify-b2b-and-agent-workflows</a>.</p>
+    </div>
+  </main>
+</body>
+</html>

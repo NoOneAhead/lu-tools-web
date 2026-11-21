@@ -1,0 +1,14 @@
+# Lu Tools — Interactive Free B2B & Developer Utilities
+
+> Free browser-based developer and RevOps pre-flight utilities built by Lu Tools, backed by lightweight Pay-Per-Event Apify Actors and n8n automation workflows.
+
+## Free Browser Tools
+- [B2B Domain Email Deliverability & SPF/DMARC Checker](https://nooneahead.github.io/lu-tools-web/): Live MX, recursive SPF 10-lookup count, DMARC, and DKIM audit.
+- [OpenAPI 3.0 Breaking-Change Diff Inspector](https://nooneahead.github.io/lu-tools-web/): Deterministic browser diff for removed endpoints, required parameters, and 2xx response removals.
+- [OSS Dependency CVE & Copyleft License Gate](https://nooneahead.github.io/lu-tools-web/): Instant npm & PyPI OSV.dev vulnerability and SPDX copyleft license check.
+
+## Scalable Pay-Per-Event Apify Actors & MCP Servers
+- [B2B Domain Pre-Flight & AI-Readiness Fusion](https://apify.com/lu-tools/b2b-domain-preflight-fusion)
+- [SaaS Pricing, OpenAPI & Changelog Semantic Diff Monitor](https://apify.com/lu-tools/saas-pricing-api-diff-monitor)
+- [OSS Dependency & Repo Due-Diligence Auditor (MCP)](https://apify.com/lu-tools/oss-dependency-due-diligence-mcp)
+- [n8n Templates & MCP Config Starter Repo](https://github.com/NoOneAhead/apify-b2b-and-agent-workflows)

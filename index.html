@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lu Tools — Free B2B Email SPF/DMARC Checker, OpenAPI Diff & OSS CVE Auditor</title>
+  <meta name="description" content="Free instant browser tools for RevOps, developers & AI engineers: B2B domain SPF/DMARC/MX deliverability checker, OpenAPI 3.0 breaking-change diff, and npm/PyPI OSV CVE & GPL license auditor." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Lu Tools — Free Developer & B2B Automation Utilities" />
+  <meta property="og:description" content="Instant browser-based B2B Domain SPF/DMARC Checker, OpenAPI Breaking-Change Diff, and OSS CVE/License Gate." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Lu Tools Interactive Developer & B2B Suite",
+    "url": "https://nooneahead.github.io/lu-tools-web/",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "description": "Free instant B2B Domain Email Deliverability Checker, OpenAPI Breaking-Change Diff Inspector, and OSS CVE & License Compliance Auditor."
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="brand-badge">LT</span>
+        <div>
+          <h1>Lu Tools</h1>
+          <p class="subtitle">Free Browser Utilities for RevOps, DevOps &amp; AI Agents</p>
+        </div>
+      </div>
+      <nav class="header-links">
+        <a id="nav-apify" href="https://apify.com/lu-tools" target="_blank" rel="noopener">Apify Store</a>
+        <a id="nav-github" href="https://github.com/NoOneAhead/apify-b2b-and-agent-workflows" target="_blank" rel="noopener">n8n &amp; MCP Templates</a>
+        <a href="./privacy.html">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2>3 Instant Free Checks — Zero Signup, Zero Tracking</h2>
+      <p>Run quick single-item checks right in your browser. Need bulk 1,000+ batch runs, persistent Slack alerts, or MCP automation for Cursor/Claude? Jump straight into our lightweight Pay-Per-Event Apify Actors.</p>
+    </section>
+
+    <div class="tabs" role="tablist">
+      <button class="tab active" data-tab="domain" role="tab" aria-selected="true">1. B2B Email &amp; SPF/DMARC Checker</button>
+      <button class="tab" data-tab="openapi" role="tab" aria-selected="false">2. OpenAPI Breaking-Change Diff</button>
+      <button class="tab" data-tab="oss" role="tab" aria-selected="false">3. OSS CVE &amp; License Gate</button>
+    </div>
+
+    <!-- TOOL 1: B2B Domain Deliverability -->
+    <section id="panel-domain" class="panel active">
+      <div class="card">
+        <h3>Free B2B Domain Email Deliverability &amp; SPF Lookup Auditor</h3>
+        <p class="hint">Checks live MX provider, recursive SPF lookup depth (RFC 7208 10-lookup limit), DMARC policy, DKIM selectors, MTA-STS, and freemail/disposable status via DNS-over-HTTPS.</p>
+        <div class="input-row">
+          <input id="domain-input" type="text" placeholder="Enter domain, URL, or email (e.g. stripe.com, ops@linear.app)" value="stripe.com" />
+          <button id="btn-run-domain" class="btn-primary">Run Live Audit</button>
+        </div>
+        <div class="quick-pills">
+          <span>Try:</span>
+          <button class="pill" data-domain="stripe.com">stripe.com</button>
+          <button class="pill" data-domain="apify.com">apify.com</button>
+          <button class="pill" data-domain="linear.app">linear.app</button>
+          <button class="pill" data-domain="mailinator.com">mailinator.com</button>
+        </div>
+        <div id="domain-result" class="result-box hidden"></div>
+      </div>
+
+      <div class="cta-banner">
+        <div>
+          <strong>Need bulk 1,000+ B2B domains + SSL + Tech Stack + <code>/llms.txt</code> + Vanta/Drata Trust Center detection?</strong>
+          <p>Run our zero-proxy 5-in-1 Apify Actor ($8 / 1,000 domains, ~$0.008 each) or import the free 15-node n8n Google Sheets + Slack pipeline.</p>
+        </div>
+        <div class="cta-actions">
+          <a id="cta-domain-apify" class="btn-accent" href="https://apify.com/lu-tools/b2b-domain-preflight-fusion" target="_blank" rel="noopener">Run Bulk on Apify →</a>
+          <a id="cta-domain-n8n" class="btn-secondary" href="https://github.com/NoOneAhead/apify-b2b-and-agent-workflows" target="_blank" rel="noopener">Free n8n Template</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOOL 2: OpenAPI Diff -->
+    <section id="panel-openapi" class="panel">
+      <div class="card">
+        <h3>Free OpenAPI 3.0 / Swagger Breaking-Change Diff Inspector</h3>
+        <p class="hint">Deterministically compares two OpenAPI JSON specs in your browser—flags removed endpoints, newly required parameters, removed 2xx responses (<code>BREAKING</code>), and new endpoints (<code>MAJOR</code>).</p>
+        <div class="diff-grid">
+          <div>
+            <label for="openapi-prev">Previous Spec (JSON)</label>
+            <textarea id="openapi-prev" rows="11" spellcheck="false"></textarea>
+          </div>
+          <div>
+            <label for="openapi-curr">Current Spec (JSON)</label>
+            <textarea id="openapi-curr" rows="11" spellcheck="false"></textarea>
+          </div>
+        </div>
+        <div class="btn-row">
+          <button id="btn-run-openapi" class="btn-primary">Compute Semantic Diff</button>
+          <button id="btn-demo-openapi" class="btn-ghost">Reset Breaking-Change Demo</button>
+        </div>
+        <div id="openapi-result" class="result-box hidden"></div>
+      </div>
+
+      <div class="cta-banner">
+        <div>
+          <strong>Want automated daily monitoring of competitor SaaS pricing pages, OpenAPI specs &amp; changelogs?</strong>
+          <p>Persistent snapshots filter out CSS/banner noise and alert Slack only on real <code>BREAKING / MAJOR</code> changes ($0.003 / check).</p>
+        </div>
+        <div class="cta-actions">
+          <a id="cta-diff-apify" class="btn-accent" href="https://apify.com/lu-tools/saas-pricing-api-diff-monitor" target="_blank" rel="noopener">Automate on Apify →</a>
+          <a id="cta-diff-n8n" class="btn-secondary" href="https://n8n.io" target="_blank" rel="noopener">Run in n8n Cloud</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOOL 3: OSS CVE & License Gate -->
+    <section id="panel-oss" class="panel">
+      <div class="card">
+        <h3>Free OSS Dependency CVE &amp; Copyleft License Compliance Gate</h3>
+        <p class="hint">Queries live <code>api.osv.dev</code>, npm, and PyPI registries to return an enterprise <code>APPROVED / REVIEW / BLOCKED</code> verdict in under 1 second.</p>
+        <div class="input-row">
+          <select id="oss-eco">
+            <option value="npm">npm (JavaScript/TS)</option>
+            <option value="pypi">PyPI (Python)</option>
+          </select>
+          <input id="oss-pkg" type="text" placeholder="Package name (e.g. zod, axios, lodash@4.17.20, fastapi)" value="zod" />
+          <button id="btn-run-oss" class="btn-primary">Audit Package</button>
+        </div>
+        <div class="quick-pills">
+          <span>Try:</span>
+          <button class="pill-oss" data-eco="npm" data-pkg="zod">npm:zod</button>
+          <button class="pill-oss" data-eco="npm" data-pkg="lodash@4.17.20">npm:lodash@4.17.20 (CVEs)</button>
+          <button class="pill-oss" data-eco="pypi" data-pkg="fastapi">pypi:fastapi</button>
+        </div>
+        <div id="oss-result" class="result-box hidden"></div>
+      </div>
+
+      <div class="cta-banner">
+        <div>
+          <strong>Give Cursor, Claude Code &amp; CI/CD a 1-call supply-chain compliance gate (npm + PyPI + Rust Cargo + GitHub)</strong>
+          <p>Connect directly via <code>mcp.apify.com</code> with ~220-token compact responses ($0.015 / audit).</p>
+        </div>
+        <div class="cta-actions">
+          <a id="cta-oss-apify" class="btn-accent" href="https://apify.com/lu-tools/oss-dependency-due-diligence-mcp" target="_blank" rel="noopener">Use via Apify / MCP →</a>
+          <a id="cta-oss-github" class="btn-secondary" href="https://github.com/NoOneAhead/apify-b2b-and-agent-workflows" target="_blank" rel="noopener">Copy mcp.json</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Built by <strong>Lu Tools</strong> · All checks run client-side against public DNS/OSV/Registry APIs. Zero user data stored. · <a href="./privacy.html">Privacy Policy</a> · <a href="./llms.txt">llms.txt</a></p>
+    </div>
+  </footer>
+
+  <script src="./config.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
